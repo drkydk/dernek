@@ -1,0 +1,22 @@
+Yönetici paneli
+	-User & privilege administration (Only for superuser)
+	-Add classroom (Only for superuser)
+
+
+Use :
+$(document).on(events, selector, data, handler);  
+------------------------------------------------
+
+Admin delete course permission
+
+NEXT_LEVEL:
+	Atölye yönetimi:
+	Atölye sekmeleri:
+	-Keman
+	-Satranç
+	-Bıdıbıdı.
+
+Seçilen atölye üzerinde ilgili eğitmenlere edit permission. (Her atölyeyi grup olarak aç)
+
+
+Arşiv.

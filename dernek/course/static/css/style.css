@@ -1,0 +1,269 @@
+body {
+    font-family: arial;
+}
+
+th, td {
+    margin: 0;
+    text-align: center;
+    border-collapse: collapse;
+    outline: 1px solid white;
+    max-width: 0px;
+}
+
+td {
+    padding: 5px 10px;
+    background: #D5F5E3;
+}
+
+th {
+    background: #85C1E9;
+    color: white;
+    padding: 5px 10px;
+}
+
+td:hover {
+    cursor: pointer;
+    background: #76D7C4;
+    color: white;
+}
+
+#useradmin th, td {
+    font-size: 13px;
+    line-height: 16px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    padding: 8px;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+
+
+}
+
+.module h2, .module caption, .inline-group h2 {
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    background: #79aec8;
+    color: #fff;
+}
+
+.module caption,
+.inline-group h2 {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.module table {
+    border-collapse: collapse;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #EBF5FB;
+}
+
+#wrap {
+    padding-top: 0;
+    margin: 0 0 0 0;
+}
+
+#regbar {
+    height: 67px;
+    background: #34495e;
+}
+
+#navthing {
+    margin-left: 50px;
+}
+
+h2 {
+    margin-top: 0;
+    padding: 20px;
+    color: #ecf0f1;
+}
+
+form {
+    border: none;
+}
+
+.lecture-form {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.lecture-form input, label, textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+}
+
+.lecture-form input, textarea {
+    margin-bottom: 5px;
+}
+
+.lecture-form input {
+    height: 20px;
+}
+
+.lecture-form textarea {
+    height: 80px;
+}
+
+.lecture-form input[type='submit'] {
+    background: #1abc9c;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.lecture-form input[type="submit"]:hover {
+    background: #1bc6a4;
+    cursor: pointer;
+}
+
+
+
+.internal {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+ }
+
+
+
+.login {
+    position: relative;
+    width: 350px;
+    display: none;
+}
+
+#useradmin {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.history {
+    position: absolute;
+    width: 350px;
+    display: none;
+    background-color: rgb(235, 245, 251);
+    border-color: rgb(52, 73, 94);
+    border-style: outset;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+
+.register {
+    position: relative;
+    width: 350px;
+    display: none;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 15px solid #ECF0F1;
+    left: 10%;
+    position: absolute;
+    top: -10px;
+}
+
+.formholder {
+    background: #ecf0f1;
+    width: 350px;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+.formholder input[type="text"], .formholder input[type="password"] {
+    padding: 7px 5px;
+    margin: 10px 0;
+    width: 96%;
+    display: block;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+.formholder input[type="text"]:focus, .formholder input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 1px 1px #1abc9c;
+}
+
+.formholder input[type="submit"] {
+    background: #1abc9c;
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.formholder input[type="submit"]:hover {
+    background: #1bc6a4;
+    cursor: pointer;
+}
+
+.randompad {
+    padding: 10px;
+}
+
+.green {
+    color: #1abc9c;
+}
+
+a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1abc9c;
+}
+
+.footer {
+    padding-top: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+.students-link {
+    color: #34495e;
+}
+
+.students-link:hover {
+    color: blue;
+}
+
+.students-link i {
+    display: none;
+}
+
+.sidebar-header-wrapper {
+    display: none!important;
+}

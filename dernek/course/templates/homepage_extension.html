@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{#{% for lecture in slectures %}#}
+{#<p>Lecture Name: {{ lecture.name }}</p>#}
+{#<p>Lecture ID: {{ lecture.id }}</p>#}
+{#<p>Classroom: {{ lecture.classroom.name }}</p>#}
+{#    <p>Time: {{ lecture.lecture_time }}</p>#}
+{#{% endfor %}#}
+    <div id="extension_counter" class="extension_counter" style="height: 50px"></div>
+{% for date, lecture_list in extension_lectures %}
+
+
+    <h3 style="text-align: center">{{ date }}</h3>
+    <table width="70%" align="center">
+        <div id="head_nav">
+            <tr>
+                <th>Saat</th>
+                {% for classroom in classroom_list2 %}
+                    <th>{{ classroom.name }}</th>
+                {% endfor %}
+            </tr>
+        </div>
+        {% for time in time_of_day2 %}
+            <tr>
+                <th>{{ time.1 }}</th>
+                {% for classroom in classroom_list2 %}
+                    {% if is_lecturer %}
+                        <td class="clickable_shedule">
+                            <form class="lecture-form">
+                                <label name="text">Ders Adı: </label>
+                                <input name="lecture_name" type="text"/>
+                                <label name="text">Öğrenciler: </label>
+                                <textarea name="students"></textarea>
+                                <input name="classroom" type="text" value="{{ classroom.name }}" style="display: none"/>
+                                <input name="date" type="text" value="{{ date|date:"Y-m-d" }}" style="display: none"/>
+                                <input name="time" type="text" value="{{ time.0 }}" style="display: none"/>
+                                <input id="lecture-submit" type="submit" value="Ders Ekle"/>
+                                {% csrf_token %}
+                            </form>
+                    {% else %}
+                        <td>
+                    {% endif %}
+                {% for lecture in lecture_list %}
+                    {% if lecture.classroom == classroom and lecture.lecture_time == time.0 %}
+                        <div class="dummy-div">
+                            {{ lecture.name }} <br>
+                            ({{ lecture.lecturer.get_full_name }}) <br>
+                            <a class="students-link">Öğrenciler: <i>{{ lecture.students }}</i></a>
+                        </div>
+
+                        {% if is_lecturer or user.is_superuser %}
+                        {% if user.is_superuser or lecture.lecturer.username == user.username %}
+                            <a class="delete-icon" style="color: red; font-size: 20px;"><i
+                                    class="fa fa-trash-o"></i></a>
+
+                            <form class="lecture-delete-form" style="display: none">
+                                <input name="lecture_name" type="text" value="{{ lecture.name }}"/>
+                                <input name="classroom" type="text" value="{{ classroom.name }}"/>
+                                <input name="date" type="text" value="{{ date|date:"Y-m-d" }}"/>
+                                <input name="time" type="text" value="{{ time.0 }}"/>
+                                {% csrf_token %}
+                            </form>
+                        {% endif %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endfor %}
+</body>
+</html>
