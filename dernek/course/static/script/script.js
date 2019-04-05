@@ -142,6 +142,8 @@ register_form.submit(function (e) {
 
 $(document).ready(function() {
         $('#useradmin').html('<object data="/admin/auth/user/" style="position:relative;float:left;width:100%;height:800px;">');
+        var x = document.getElementsByClassName("sidebar");
+        x.style.display = "none";
 });
 
   $( function() {
